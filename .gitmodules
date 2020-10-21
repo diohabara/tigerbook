@@ -1,0 +1,3 @@
+[submodule "SLPL"]
+	path = SLPL
+	url = git@github.com:diohabara/SLPL.git
