@@ -1,4 +1,3 @@
-
 /**
  * ref: https://www.cs.princeton.edu/~appel/modern/ml/chap2/tokens.sig
  * signature Tiger_TOKENS =
@@ -51,8 +50,9 @@
  * val EOF:  linenum * linenum -> token
  * end
  */
+#[derive(Clone, Debug, PartialEq, Eq, PartialOrd, Ord)]
 pub enum TokenKind {
-    /* Reversed words */
+    // Reversed words
     Type,
     Var,
     Function,
@@ -72,39 +72,57 @@ pub enum TokenKind {
     Array,
     Assign,
 
-    /* punctuation symbols */
+    // Punctuation symbols
+    /// "|"
     Or,
+    /// "&"
     And,
+    /// ">="
     Ge,
+    /// ">"
     Gt,
+    /// "<"
     Le,
+    /// "<="
     Lt,
+    /// "<>"
     Neq,
+    /// "="
     Eq,
+    /// "/"
     Divide,
+    /// "*"
     Times,
+    /// "-"
     Minus,
+    /// "+"
     Plus,
+    /// "."
     Dot,
-    // {}
+    /// "{"
     Lbrace,
+    /// "}"
     Rbrace,
-    // []
+    /// "["
     Lbrack,
+    /// "]"
     Rbrack,
-    // ()
+    /// "("
     Lparen,
+    /// ")"
     Rparen,
+    /// ";"
     Semicolon,
+    /// ":"
     Colon,
+    /// ","
     Comma,
-    CommentEnd,
 
-    /* literals */
-    String(String),
+    // literals
+    Str(String),
     Int(u64),
     Id(String),
 
-    /* EOF */
+    // EOF
     Eof,
 }
