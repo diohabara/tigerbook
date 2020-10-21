@@ -4,3 +4,10 @@ language = "en"
 multilingual = false
 src = "memo"
 title = "tigermemo"
+description = "development memo of writing tiger in Rust"
+
+[rust]
+edition = "2018"
+
+[build]
+build-dir = "docs"
