@@ -1,4 +1,4 @@
-pub enum Token {
+pub enum TokenKind {
     /**
     * ref: https://www.cs.princeton.edu/~appel/modern/ml/chap2/tokens.sig
     * signature Tiger_TOKENS =
@@ -50,8 +50,8 @@ pub enum Token {
     * val ID: (string) *  linenum * linenum -> token
     * val EOF:  linenum * linenum -> token
     * end
+    */
 
-       */
     /* Reversed words */
     Type,
     Var,
