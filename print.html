@@ -160,6 +160,11 @@
                         <h1><a class="header" href="#chapter-1" id="chapter-1">Chapter 1</a></h1>
 <p>This chapter was just an introduction.</p>
 <p>I wrote <a href="https://github.com/diohabara/SLPL">a simple program</a>, without even a lexer.</p>
+<p>It was also simple to write this program. Since Rust can deal with algebraic data types, I just translated OCaml <code>datatype</code> into <code>enum</code>.</p>
+<p>Creating recursive enums require using <code>Box&lt;T&gt;</code>. <code>Box&lt;T&gt;</code> is a smart pointer to a head allocated <code>T</code> values. At compile time, Rust needs to know how much space a type takes up<sup class="footnote-reference"><a href="#1">1</a></sup>, so you should use <code>Box&lt;T&gt;</code> to translate straightforwardly.</p>
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>https://doc.rust-lang.org/book/ch15-01-box.html#enabling-recursive-types-with-boxes</p>
+</div>
 <h1><a class="header" href="#chapter-2" id="chapter-2">Chapter 2</a></h1>
 <p><strong>Lexical Analysis</strong></p>
 <blockquote>
