@@ -1,6 +1,9 @@
-on: [push]
+name: compiler
 
-name: CI
+on:
+  push:
+    branches:
+        - master
 
 jobs:
   build_and_test:
