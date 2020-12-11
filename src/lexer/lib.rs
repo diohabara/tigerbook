@@ -126,3 +126,18 @@ pub enum TokenKind {
     // EOF
     Eof,
 }
+
+pub fn tokenize(mut input: &str) -> Impl Iterator<Item = Token> + '_ {
+    std::iter::from_fn( move || {
+        if input.is_empty() {
+            return None;
+        }
+        let token = first_token(input);
+        input = &input[token.len..];
+        Some(token)
+    })
+}
+
+fn first_token(mut input: &str) -> TokenKind {
+    unimplemented!()
+}
